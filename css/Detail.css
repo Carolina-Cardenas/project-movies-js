@@ -1,5 +1,7 @@
 .detailPage {
     position: relative;
+    width: 100%;
+    height: 100%;
   } 
   .detailPage .background {
     min-height: 100vh;
@@ -7,6 +9,8 @@
     background-size: cover;
     flex-direction: column;
     justify-content: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
   }
    .detailPage img {
     border: 5px solid #fff;

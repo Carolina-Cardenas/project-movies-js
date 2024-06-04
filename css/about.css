@@ -1,0 +1,40 @@
+.about-container {
+    
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+/* Estilos para el párrafo */
+.about-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+.about-container a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}

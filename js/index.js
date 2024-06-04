@@ -1,35 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
     const mainContent = document.getElementById("main-content");
-    // const homeLink = document.getElementById("home-link");
+    
     const moviesLink = document.getElementById("movies-link");
-    // const aboutLink = document.getElementById("about-link");
+     const aboutLink = document.getElementById("about-link");
 
-    // homeLink.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     loadHome();
-    //  });
-
+    
     moviesLink.addEventListener("click", (e) => {
         e.preventDefault();
         loadMovies();
     });
 
-    //  aboutLink.addEventListener("click", (e) => {
-    //    e.preventDefault();
-    //   loadAbout();
-    //  });
+     aboutLink.addEventListener("click", (e) => {
+       e.preventDefault();
+      loadAbout();
+     });
 
-    const loadHome = () => {
-        mainContent.innerHTML = `
-            <h1>Welcome to Movie Project</h1>
-            <p>This is the home page.</p>
-        `;
-    };
-
+  
     const loadAbout = () => {
         mainContent.innerHTML = `
-            <h1>About Us</h1>
-            <p>This is the about page.</p>
+        <div class="about-container">
+        <h1>About Us</h1>
+        <p>TWelcome to our movie page!
+
+        In this exciting space, we delve into the fascinating world of cinema in all its forms and genres. We are a team of movie enthusiasts dedicated to providing you with a unique and thrilling cinematic experience.
+        
+        Our mission is to share our passion for movies and provide you with resources to discover new films, revisit timeless classics, and explore the vast universe of cinema. Whether you're a seasoned cinephile or simply seeking entertainment, we're here for you.
+        
+        On our page, you'll find honest reviews, carefully curated recommendations, and informative articles covering everything related to the world of film. From in-depth critiques to must-watch movie lists, we're committed to delivering quality content that enhances your movie-watching experience.
+        
+        Moreover, we love interacting with our community of movie buffs. So feel free to leave us your comments, share your thoughts, and join the conversation!
+        
+        Join us on this thrilling journey through the world of cinema!</p>
+    </div>
         `;
     };
 
@@ -40,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let movies = data.results;
 
         mainContent.innerHTML = `
+        <div class="container">
             <aside class="sidebar">
                 <h2>Search Movies</h2>
                 <input  class="input" type="text" placeholder="Search..." id="search-box">
@@ -57,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
               
                 `).join('')}
             </div>
+
+        </div>
         `;
 
         document.getElementById("search-box").addEventListener("input", (e) => {
@@ -83,11 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mainContent.innerHTML = `
             <article class="detailPage">
-                <header>
-                    <nav>
-                        <a href="#" id="back-link" class="backLink">Movies</a>
-                    </nav>
-                </header>
                 <div class="background" style="background-image: url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path});">
                     <div class="summary">
                         <img src="https://image.tmdb.org/t/p/w342${movie.poster_path}" alt="${movie.title}">
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    loadHome();
+    loadMovies();
 });
 
 
