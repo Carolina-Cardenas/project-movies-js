@@ -1,0 +1,57 @@
+.moviePage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.moviePage a {
+  width: 100%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  max-width: 1200px;
+}
+
+@media (min-width: 370px) {
+  .moviePage a {
+    width: calc(100% / 2);
+  }
+}
+
+@media (min-width: 570px) { 
+  .moviePage a {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 820px) {
+  .moviePage a {
+    width: calc(100% / 4);
+  }
+}
+
+.moviePage a img {
+  width: 100%;
+}
+
+.moviePage .details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  padding: 20px;
+}
+
+.moviePage .details h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.moviePage a:hover .details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}

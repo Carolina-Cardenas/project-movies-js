@@ -1,0 +1,73 @@
+.detailPage {
+    position: relative;
+  } 
+  .detailPage .background {
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+   .detailPage img {
+    border: 5px solid #fff;
+    width: 200px;
+  } 
+  
+    .detailPage .details {
+    margin-left: 0;
+  }  
+
+
+  .detailPage .details h1 {
+    font-size: 2em;
+}
+  
+  @media (min-width: 577px) {
+    .detailPage .summary {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 50px;
+    }
+  
+    .detailPage .details {
+      margin-left: 20px;
+    }
+  
+    .detailPage img {
+      width: 250px;
+    }
+  }
+  
+  @media (min-width: 770px) {
+    .detailPage img {
+      width: initial;
+    }
+  }
+  
+  .detailPage .details h1 {
+    text-shadow: 1px 1px rgb(77, 77, 77);
+  }
+  
+  .detailPage .details .title {
+    margin-right: 10px;
+  }
+  
+  .detailPage .details p {
+    max-width: 400px;
+  }
+  
+  .detailPage .rating {
+    color: black;
+    font-weight: 500;
+    margin-left: 10px; 
+    background: white;
+    padding: 0 5px;
+    text-shadow: none;
+    display: inline-block;
+  }
+  
+  .detailPage .rating:before {
+    content: url("../img/star.svg");
+    padding-right: 5px;
+  }
