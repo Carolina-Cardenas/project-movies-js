@@ -10,19 +10,21 @@
   text-decoration: none;
   max-width: 1200px;
 }
+
 .movies {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
 }
 
 .moviePage a {
-  width: 100%; 
+  width: 100%;
   position: relative;
   color: #fff;
   text-decoration: none;
   max-width: 1200px;
 }
+
 @media (min-width: 370px) {
 
   .moviePage a {
@@ -30,7 +32,7 @@
   }
 }
 
-@media (min-width: 570px) { 
+@media (min-width: 570px) {
   .moviePage a {
     width: calc(100% / 3);
   }
@@ -38,22 +40,23 @@
 
 
 @media (min-width: 768px) {
- 
+
   .moviePage a {
     width: calc(100% / 4);
   }
+
   .container {
     flex-direction: row;
-}
+  }
 
-.sidebar {
-    order: 1; 
-    width: auto; 
-}
+  .sidebar {
+    order: 1;
+    width: auto;
+  }
 
-.movies {
-    order: 2; 
-}
+  .movies {
+    order: 2;
+  }
 }
 
 .moviePage a img {
