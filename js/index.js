@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const loadAbout = () => {
         mainContent.innerHTML = `
         <div class="about-container">
-        <h1>About Us</h1>
-        <p>TWelcome to our movie page!
+        <h2>About Us</h2>
+        <p class="p" >Welcome to our movie page!
 
         In this exciting space, we delve into the fascinating world of cinema in all its forms and genres. We are a team of movie enthusiasts dedicated to providing you with a unique and thrilling cinematic experience.
         
@@ -40,13 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
         const response = await fetch(url);
         const data = await response.json();
         let movies = data.results;
-
+//  <aside class="sidebar ">
+//                 <h2>Filter </h2>
+//                 <input  class="search" type="text" placeholder="Search..." id="search-box">
+//                 <svg viewBox="0 0 24 24" class="search__icon">
+//                 <g>
+//                   <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+//                   </path>
+//                 </g>
+//               </svg>
+//             </aside>
         mainContent.innerHTML = `
         <div class="container">
-            <aside class="sidebar">
-                <h2>Search Movies</h2>
-                <input  class="input" type="text" placeholder="Search..." id="search-box">
-            </aside>
+           
+<div class="search-container">
+    <input class="input" type="text" placeholder="Search..." id="search-box">
+  
+</div>
             <div class="movies moviePage">
                 ${movies.map(movie => `
                     
@@ -113,63 +123,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//     const loadMovies = async () => {
-//         const url = "https://api.themoviedb.org/3/movie/popular?api_key=432fbe8327d23760a3e88a6c24652d16&language=en-US&page=1";
-//         const response = await fetch(url);
-//         const data = await response.json();
-//         const movies = data.results;
-
-//         mainContent.innerHTML = `
-//             <div class="movies moviePage">
-//                 ${movies.map(movie => `
-                   
-//                         <a href="#" onclick="showDetail(${movie.id})">
-//                             <img src="https://image.tmdb.org/t/p/w342${movie.poster_path}" alt="${movie.title}">
-//                             <div class="details">
-//                                 <h1>${movie.title}</h1>
-//                                 <p>Released ${movie.release_date}</p>
-//                             </div>
-//                         </a>
-              
-//                 `).join('')}
-//             </div>
-//         `;
-//     };
-
-//     window.showDetail = async (id) => {
-//         const url = `https://api.themoviedb.org/3/movie/${id}?api_key=432fbe8327d23760a3e88a6c24652d16&language=en-US`;
-//         const response = await fetch(url);
-//         const movie = await response.json();
-
-//         const genres = movie.genres.map(genre => genre.name).join(', ');
-
-//         mainContent.innerHTML = `
-//             <article class="detailPage">
-//                 <header>
-//                     <nav>
-//                         <a href="#" id="back-link" class="backLink">Movies</a>
-//                     </nav>
-//                 </header>
-//                 <div class="background" style="background-image: url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path});">
-//                     <div class="summary">
-//                         <img src="https://image.tmdb.org/t/p/w342${movie.poster_path}" alt="${movie.title}">
-//                         <div class="details">
-//                             <h1>${movie.title} <span class="rating">${movie.vote_average}</span></h1>
-//                             <p>Genres: ${genres}</p>
-//                             <p>${movie.overview}</p>
-//                             <p>Length ${movie.runtime} min</p>
-                            
-//                         </div>
-//                     </div>
-//                 </div>
-//             </article>
-//         `;
-
-//         document.getElementById("back-link").addEventListener("click", (e) => {
-//             e.preventDefault();
-//             loadMovies();
-//         });
-//     };
-
-//     loadMovies();
-// });

@@ -11,7 +11,7 @@
   max-width: 1200px;
 }
 .movies {
-  flex: 1; /* Las películas ocupan todo el espacio restante */
+  flex: 1; 
   display: flex;
   flex-wrap: wrap;
 }
@@ -48,7 +48,7 @@
 
 .sidebar {
     order: 1; 
-    width: auto; /* Auto-ancho para permitir que las películas ocupen el espacio */
+    width: auto; 
 }
 
 .movies {
